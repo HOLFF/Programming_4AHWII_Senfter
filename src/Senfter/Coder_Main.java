@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -30,6 +31,7 @@ public class Coder_Main extends Application {
         final Scene scene = new Scene(root, 600, 300);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Coder");
+        primaryStage.getIcons().add(new Image("Senfter/icon.jpg"));
         primaryStage.setResizable(false);
         primaryStage.show();
     }
