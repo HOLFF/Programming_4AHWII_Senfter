@@ -4,6 +4,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
 
+import java.awt.*;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.regex.Matcher;
@@ -14,6 +17,7 @@ public class Coder_Controller {
     private String lastencoded="";
     public Button forth;
     public Button back;
+    public Button copy;
     public TextField input;
     public TextField first;
     public TextField second;
@@ -34,6 +38,13 @@ public class Coder_Controller {
         decodetwo();
         decodethree();
         decodefour();
+    }
+
+    public void copy(){
+        String myString = last.getText();
+        StringSelection stringSelection = new StringSelection(myString);
+        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+        clipboard.setContents(stringSelection, null);
     }
 
     public void encodeone() {
@@ -142,8 +153,6 @@ public class Coder_Controller {
         }
         Collections.reverse(temp);
         String[] rep = temp.stream().toArray(String[]::new);
-        ausgabe(old);
-        ausgabe(rep);
         for (int i = 0; i<numof;i++){
             fin=fin.replace(old[i],rep[i]);
         }
