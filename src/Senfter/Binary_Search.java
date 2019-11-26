@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class Binary_Search {
     public static void main(String[] args) {
-        int[] rans = befüllen(100);
-        pos(rans, 50);
+        int[] rans = befüllen(1000);
+        pos(rans, 500);
         //ausgabe(rans);
     }
 
@@ -22,7 +22,7 @@ public class Binary_Search {
         }
         if (arr[pos] == toS) {
             System.out.println("Zahl auf Position: " + pos);
-            System.out.println("Gesuchte Zahl: " + toS + "   Zahl auf gefundener Position: " + arr[pos]);
+            System.out.println("Gesuchte Zahl: " + toS + "   Zahl auf gefundener Position["+pos+"]: " + arr[pos]);
         } else System.out.println("Zahl nicht vorhanden");
     }
 
@@ -32,6 +32,7 @@ public class Binary_Search {
             int random = (int) (Math.random() * laenge + 1);
             nums[i] = random;
         }
+
         Arrays.sort(nums);
         return nums;
     }
