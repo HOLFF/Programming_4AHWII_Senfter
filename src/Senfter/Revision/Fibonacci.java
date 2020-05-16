@@ -1,4 +1,4 @@
-package Senfter;
+package Senfter.Revision;
 
 import java.util.Scanner;
 
@@ -18,6 +18,6 @@ public class Fibonacci {
             if(f3>unter)num++;
             f2=f3;f3+=f1;f1=f2;
         }
-        System.out.println("Die Anzahl der Senfter.Fibonacci-Zahlen zwischen "+unter+" und "+ober+" beträgt: "+num);
+        System.out.println("Die Anzahl der Senfter.Revision.Fibonacci-Zahlen zwischen "+unter+" und "+ober+" beträgt: "+num);
     }
 }

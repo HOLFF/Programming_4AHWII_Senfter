@@ -1,4 +1,4 @@
-package Senfter;
+package Senfter.Corona;
 
 public class Primyahl {
     public static void main(String[] args){
@@ -32,3 +32,7 @@ public class Primyahl {
         return bA;
     }
 }
+
+/*
+der Aufwand steigt exponentiell mit dem Zahlenbereich
+ */
