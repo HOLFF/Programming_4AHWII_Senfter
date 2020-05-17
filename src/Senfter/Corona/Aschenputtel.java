@@ -1,6 +1,6 @@
 package Senfter.Corona;
-import java.io.*;
-import java.nio.file.Paths;
+import java.io.File;
+import java.io.PrintStream;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -10,7 +10,7 @@ public class Aschenputtel {
     public static void main(String[]args)throws Exception {
     final PrintStream zahl=new PrintStream(new File("ZAHL.txt"));
     final PrintStream text=new PrintStream(new File("TEXT.txt"));
-    String file = "Senfter/Corona/in.txt";
+    File file = new File("C:\\Users\\leerh\\IdeaProjects\\Programming_4AHWII_Senfter\\src\\in.txt");
     Scanner s = new Scanner(file);
     while(s.hasNextLine()){
         process(s.nextLine(),zahl,text);
@@ -44,7 +44,7 @@ public class Aschenputtel {
         if(!b){
             if(containsDigit(in)){
                 String numbers=in.replaceAll("[^0-9]", "");
-                write(numbers,zahl);
+                write(Integer.toString(Integer.parseInt(numbers)*2),zahl);
             }
             else{
                 write(in,text);
